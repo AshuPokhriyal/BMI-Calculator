@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BMI Calculator</title>
+    <!-- Bootstap CSS-->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+   <!--Custom Css-->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- JavaScript Bundle with Popper Bootstrap-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+   <!--FontAwesome CDN-->
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+
+<script src="js/bmi.js"></script>
+
+  </head>
+  <body>
+    <!--NAV bar-->
+    <!--End of NAV bar-->
+
+
+    <div class="row heading-row">
+      <h1 class="heading">BMI Calculator</h1>
+      <h3 class="heading-desc">BMI (body mass index) is a measure of whether you're a healthy weight for your height.
+         Use this BMI calculator to check the adults in your family.</h3>
+    </div>
+
+
+
+    <!--Main Container-->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 input-container">
+          <!---->
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="metricRadioOptions" id="usradio" value="us" checked onclick="getSelectedMetric()">
+            <label class="form-check-label" for="usradio">US</label>
+          </div>
+          <div class="form-check form-check-inline" id="metricradiodiv">
+            <input class="form-check-input" type="radio" name="metricRadioOptions" id="metricradio" value="metric" onclick="getSelectedMetric()">
+            <label class="form-check-label" for="metricradio">Metric</label>
+          </div>
+          <!---->
+          <form>
+            <div class="form-group row form-customgroup">
+              <label for="age" class="col-sm-2 col-form-label">Age</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="age" placeholder="Age">
+              </div>
+            </div>
+
+            <div class="form-customgroup">
+            <label class="col-sm-2 col-form-label">Gender</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleradio" value="option1">
+              <label class="form-check-label" for="maleradio">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleradio" value="option2">
+              <label class="form-check-label" for="femaleradio">Female</label>
+            </div>
+            </div>
+
+
+            <div class="form-group row form-customgroup" id="ftheight-container">
+              <label class="col-sm-2 col-form-label">Height</label>
+              <div class="col-sm-5">
+                <input type="number" class="form-control" id="ftheight" placeholder="ft">
+              </div>
+              <div class="col-sm-5">
+                <input type="number" class="form-control" id="inchheight" placeholder="inch">
+              </div>
+            </div>
+            <div class="form-group row form-customgroup" id="cmheight">
+              <label for="Height" class="col-sm-2 col-form-label">Height</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" id="heightincm" placeholder="cm">
+              </div>
+            </div>
+            <div class="form-group row form-customgroup">
+              <label for="weight" class="col-sm-2 col-form-label">Weight</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" id="weight" placeholder="kg">
+              </div>
+            </div>
+            <div class="d-grid submit-btn">
+              <button class="btn btn-lg" type="button" onclick="calculateBMI()">Calculate BMI</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-4 result-container">
+          <div class="row">
+            <img id="result-img" class="result-img" src="images/bmi.png" alt="result image">
+            <h3 class="result-bmi-heading">Your BMI</h3>
+            <h1 id="result-bmi" class="result-bmi"></h1>
+            <p id="result-desc" class="result-desc">Let's find out how healthy you are.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

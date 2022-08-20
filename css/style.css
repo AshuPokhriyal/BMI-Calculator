@@ -1,0 +1,41 @@
+.heading-row{
+  padding: 3rem;
+}
+.heading{
+  font-family: 'Lato', sans-serif;
+}
+.heading-desc{
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;}
+.input-container{
+  background-color: yellow;
+  padding: 5rem
+}
+.result-container{
+  background-color: #7DCE13;
+  text-align: center;
+  padding: 5rem;
+}
+.form-customgroup{
+  margin-top: 1rem;
+}
+.submit-btn{
+  margin-top: 3rem;
+  background-color: red;
+}
+.result-img{
+  height: 15rem;
+}
+.result-bmi-heading{
+  border: 2px solid red;
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+.result-bmi{
+  font-weight: 900;
+  color: red;
+}
+#cmheight{
+  display: none;
+}
